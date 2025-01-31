@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "Main";
+  src: url("game.otf") format("truetype");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vw;
+  overflow: hidden;
+  color: white;
+  overflow-y: hidden;
+  z-index: 1;
+}
+
+.bodymap{
+overflow-y: scroll;
+}
+
+body::before {
+  content: "";
+  background: url(img/Fundo.png) no-repeat center/cover;
+  z-index: -5;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  width: 100vw;
+  height: 20vh;
+  object-fit: cover;
+}
+
+.nav {
+  margin-top: -10px;
+  width: 100vw;
+  height: 4vh;
+  background-color: #000000;
+  color: #ffffff;
+  gap: 15px;
+  padding: 1%;
+}
+
+.tex {
+  color: white;
+  font-size: 30px;
+  font-family: "main";
+}
+
+.barra {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1.3fr;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.conteudo {
+  background-color: black;
+  color: white;
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: 800px; /* Define uma largura máxima */
+  padding: 13px;
+  margin: auto; /* Centraliza a div */
+  border-radius: 15px;
+  border: 2px solid white;
+  box-sizing: border-box; /* Inclui padding e borda no cálculo de largura */
+  font-family: 'main';
+  margin-top:25px;
+  opacity: 0;
+  transform: translateY(200%);
+  filter: blur(10px);
+  animation: ease-out porcos_voadores 1s forwards;
+}
+
+@keyframes porcos_voadores 
+{
+100%
+{
+transform: translateY(0%);
+filter: blur(0px);
+opacity: 1;
+}
+}
+
+.texto {
+    letter-spacing:2px;
+}
+
+.lista {
+    letter-spacing: 2px;
+}
+
+.personagem{
+  width:50px;
+  position: relative;
+  top:0;
+  left: 0;
+}
+
+.mapa {
+  width: 100%; /* Aumenta a largura do mapa */
+  height: 650px;
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+  margin: 0 auto;
+}
+
+.footer {
+  width:100vw;
+  height: 15vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+align-items: center;
+}
+
+.footer p{
+font-family: 'main';
+font-size: 2vw;
+color: white;
+}
+
+a {
+ color: white;
+ text-decoration: none;
+}
+
